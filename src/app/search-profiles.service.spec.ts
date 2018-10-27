@@ -1,12 +1,15 @@
-import { TestBed } from '@angular/core/testing';
+iimport { TestBed, inject } from '@angular/core/testing';
 
 import { SearchProfilesService } from './search-profiles.service';
 
 describe('SearchProfilesService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
-
-  it('should be created', () => {
-    const service: SearchProfilesService = TestBed.get(SearchProfilesService);
-    expect(service).toBeTruthy();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [SearchProfilesService]
+    });
   });
+
+  it('should ...', inject([SearchProfilesService], (service: SearchProfilesService) => {
+    expect(service).toBeTruthy();
+  }));
 });
