@@ -1,23 +1,38 @@
+import {RouterModule} from '@angular/router';
+import {RoutingModule} from './routing/routing.module'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
-import { SearchProfileComponent } from './search-profile/search-profile.component';
-import { SearchProfilesService } from './search-profiles.service';
+import { ProfileComponent } from './profile/profile.component';
+import { SearchComponent } from './search/search.component';
+import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchProfileComponent
+    ProfileComponent,
+    SearchComponent,
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
-    HttpModule
+    RouterModule.forRoot([
+      {path: 'search', component:SearchComponent},
+      {path: 'profile', component:ProfileComponent},
+      {path: 'about', component:AboutComponent},
+      {path:"",redirectTo:"/search",pathMatch:"full"},
+      {path: '**', component:NotFoundComponent}
+      ])
   ],
-  providers: [SearchProfilesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
