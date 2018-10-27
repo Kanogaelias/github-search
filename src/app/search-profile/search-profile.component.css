@@ -1,10 +1,10 @@
-.user {
+.profile {
     cursor: pointer;
     padding: 1em;
     margin: 1em;
   }
   
-  .user:hover {
+  .profile:hover {
     box-shadow: 1px 2px 3px #ccc;
   }
   
