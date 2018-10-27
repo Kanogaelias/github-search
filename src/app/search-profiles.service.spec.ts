@@ -1,4 +1,4 @@
-iimport { TestBed, inject } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 
 import { SearchProfilesService } from './search-profiles.service';
 

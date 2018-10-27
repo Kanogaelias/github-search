@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchProfilesService } from '../search-profile.service';
+import { SearchProfilesService } from '../search-profiles.service';
 
 @Component({
   selector: 'app-search-profile',
@@ -13,14 +13,14 @@ export class SearchProfileComponent implements OnInit {
   selected: boolean = false; // To identified if user is already selected
   selectedUser: any; // Details of selected user
 
-  constructor(private searchService: SearchProfileService) { }
+  constructor(private searchService: SearchProfilesService) { }
   ngOnInit() { }
 
   search(place: string) {
     this.selected = false;
     if (place) {
       this.place = place;
-      this.searchService.getUsersByPlace(place).subscribe(
+      this.searchService.getProfilesByPlace(place).subscribe(
         users => {
           this.results = users;
         },
