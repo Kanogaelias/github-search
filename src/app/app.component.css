@@ -8,8 +8,9 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(60, 211, 14);
     font-family: 'Noto Serif', serif; 
+    text-align: center;
 }
 
 li {
@@ -18,7 +19,7 @@ li {
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: pink;
 }
 
 li a {
@@ -31,11 +32,11 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: rgb(17, 17, 17);
 }
 
 .background{
-	background-image: url('../assets/cat.jpg'); 
+	background-image: url('../assets/wolf.jpg'); 
 	background-repeat: no-repeat; 
 /*	background-attachment: fixed;
 */	background-size: cover;
@@ -47,6 +48,6 @@ li a:hover {
 }
 
 .fa{
-	font-size:30px; 
-	color:white;
+	font-size:50px; 
+	color:blue;
 }
