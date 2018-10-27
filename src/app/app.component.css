@@ -3,6 +3,10 @@
 body{
     padding-top: 10%;
 }
+
+.bg-dark{
+    background-color: pink;
+}
 ul {
     list-style-type: none;
     margin: 0;

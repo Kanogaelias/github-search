@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ProfileService {
   reponame: string='';
-	username = 'muthangashem';
+	username = 'kanogaelias';
 	client_id = '6228816eae502586b23a';
 	client_secret = '02d3234aeae94509c9b75c42d35813c59e53dc9e';
   token_key:string = 'fa2e3db99d8c17e5bba023a0c8986898a523e8dd' ;
