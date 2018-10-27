@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 //import { Observable } from 'rxjs/Observable';
-import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
+import { Observable, Subject, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
+import 'rxjs/Rx';
+
 
 @Injectable()
 export class SearchProfilesService {
 
-  private getUserDetailsEndPoint = 'https://api.github.com/users/';
+  private getProfilesDetailsEndPoint = 'https://api.github.com/users/';
   searchProfilesEndPoint: any;
   getProfileDetailsEndPoint: any;
   constructor(private http: Http) { }
@@ -18,15 +21,15 @@ export class SearchProfilesService {
 
     return this.http.get(url)
       .map(this.extractData)
-      .catch(this.handleError);
+     .catch(this.handleError);
   }
 
-  getDetailsByUserName(username: string) {
-    if (username) {
-      const url = `${this.getProfileDetailsEndPoint}${username}`;
+  getDetailsByProfileName(profilename: string) {
+    if (profilename) {
+      const url = `${this.getProfileDetailsEndPoint}${profilename}`;
       return this.http.get(url)
         .map(this.newMethod())
-        .catch(this.handleError);
+       .catch(this.handleError);
     }
   }
 

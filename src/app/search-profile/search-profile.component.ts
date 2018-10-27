@@ -12,6 +12,7 @@ export class SearchProfileComponent implements OnInit {
   results: any[] = []; // Store data in results from the service
   selected: boolean = false; // To identified if user is already selected
   selectedUser: any; // Details of selected user
+  selectedProfile: import("/home/elias/Github-search/node_modules/@angular/http/src/static_response").Response;
 
   constructor(private searchService: SearchProfilesService) { }
   ngOnInit() { }
@@ -21,8 +22,8 @@ export class SearchProfileComponent implements OnInit {
     if (place) {
       this.place = place;
       this.searchService.getProfilesByPlace(place).subscribe(
-        users => {
-          this.results = users;
+        profiles => {
+          this.results = profiles;
         },
         error => {
           this.results = [];
@@ -34,10 +35,10 @@ export class SearchProfileComponent implements OnInit {
     }
   }
 
-  getDetails(username: string) {
-    this.searchService.getDetailsByUserName(username).subscribe(
-      userDatils => {
-        this.selectedUser = userDatils;
+  getDetails(profilename: string) {
+    this.searchService.getDetailsByProfileName(profilename).subscribe(
+      profileDetails => {
+        this.selectedProfile = profileDetails;
         this.selected = true;
       },
       error => {
