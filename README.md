@@ -1,7 +1,7 @@
 # Github-search
 By Elias Kanoga Ndegwa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 5.2.9
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 5.2.9 and allows a user to search through users profiles and repos using the search navigation
 
 ## Development server
 
@@ -29,4 +29,4 @@ For any issues or questions arising, Contact details are:
 
 ### MIT License
 
-#Copyright @2018
+# Copyright @2018
