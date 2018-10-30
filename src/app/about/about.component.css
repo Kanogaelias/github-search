@@ -1,7 +1,16 @@
 h2{
-	font-family: 'Noto Serif', serif; 
+	font-family: 'Noto Serif', serif;
 }
 
 p{
 	font-family: 'PT Serif', serif;
 }
+.container-fluid {
+  color: palegoldenrod;
+  text-align:center;
+  font-size: xx-large;
+
+}
+#navbar{
+color: pink;
+ }

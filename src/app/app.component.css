@@ -13,7 +13,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: rgb(60, 211, 14);
-    font-family: 'Noto Serif', serif; 
+    font-family: 'Noto Serif', serif;
     text-align: center;
 }
 
@@ -28,7 +28,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: blue;
     text-align: center;
     padding: 14px 30px;
     text-decoration: none;
@@ -36,22 +36,22 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(92, 197, 31);
 }
 
 .background{
-	background-image: url('../assets/wolf.jpg'); 
-	background-repeat: no-repeat; 
+	background-image: url('../assets/wolf.jpg');
+	background-repeat: no-repeat;
 /*	background-attachment: fixed;
 */	background-size: cover;
-	background-position: center; 
+	background-position: center;
 	padding: 0;
-	margin: 0; 
+	margin: 0;
 	height:100vh;
     margin-top: 5%;
 }
 
 .fa{
-	font-size:50px; 
+	font-size:50px;
 	color:blue;
 }
